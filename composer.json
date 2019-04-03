@@ -1,0 +1,13 @@
+{
+    "require": {
+        "twig/twig": "^2.0",
+        "phpunit/phpunit": "^7.5"
+    }, "autoload": {
+    "psr-4": {
+        "app\\": ""
+    }
+},
+    "require-dev": {
+        "phpunit/dbunit": "^4.0"
+    }
+}
