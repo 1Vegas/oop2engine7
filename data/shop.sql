@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Апр 01 2019 г., 18:41
+-- Время создания: Апр 03 2019 г., 23:18
 -- Версия сервера: 5.7.16
 -- Версия PHP: 7.1.0
 
@@ -37,10 +37,8 @@ CREATE TABLE `basket` (
 --
 
 INSERT INTO `basket` (`id`, `session_id`, `product_id`) VALUES
-(11, 'p1qcg4beoa1lha85f2763gm7ov0oimul', '1'),
-(12, 'p1qcg4beoa1lha85f2763gm7ov0oimul', '2'),
-(13, 'p1qcg4beoa1lha85f2763gm7ov0oimul', '14'),
-(14, 'p1qcg4beoa1lha85f2763gm7ov0oimul', '17');
+(170, 'atjau9haljolo925uan69jandlpfbvi5', '1'),
+(171, 'atjau9haljolo925uan69jandlpfbvi5', '2');
 
 -- --------------------------------------------------------
 
@@ -72,15 +70,17 @@ CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone` varchar(100) NOT NULL
+  `phone` varchar(100) NOT NULL,
+  `sess` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `orders`
 --
 
-INSERT INTO `orders` (`id`, `username`, `email`, `phone`) VALUES
-(82, 'User', 'user545454545@user.com', '8800-2000000');
+INSERT INTO `orders` (`id`, `username`, `email`, `phone`, `sess`) VALUES
+(117, 'User', 'user@user.com', '+79888772212', 'Пицца Сырная,Пицца Мясная, в количестве: 1,1'),
+(118, 'Антон Иванов', 'iv1a1n1o1nnnv@mail.ru', '88002004111', 'Хлеб Кефирный, в количестве: 1');
 
 -- --------------------------------------------------------
 
@@ -170,7 +170,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `login`, `pass`) VALUES
 (1, 'admin', '123'),
-(2, 'user', '202cb962ac59075b964b07152d234b70');
+(2, 'user', '123');
 
 -- --------------------------------------------------------
 
@@ -254,7 +254,7 @@ ALTER TABLE `users2`
 -- AUTO_INCREMENT для таблицы `basket`
 --
 ALTER TABLE `basket`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --
@@ -264,7 +264,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 --
 -- AUTO_INCREMENT для таблицы `products`
 --
